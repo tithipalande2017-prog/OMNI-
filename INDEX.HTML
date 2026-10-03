@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMNI-SCOPE | See beyond what magic hides.</title>
+    <meta name="description" content="OMNI-SCOPE is a fictional magical spatial scanner built for the wizarding world." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/scanner.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container nav-shell">
+        <a href="#hero" class="brand" aria-label="OMNI-SCOPE home">
+          <img src="assets/logo.svg" alt="OMNI-SCOPE logo" />
+          <span>OMNI-SCOPE</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div class="nav-panel">
+            <a href="#problem">The Problem</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#scanner">Blueprint Scanner</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#safety">Safety</a>
+            <a href="#service">Request Service</a>
+            <button class="btn btn-primary nav-order" type="button" data-open-modal="orderModal">Order Now</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="stars" aria-hidden="true"></div>
+        <svg class="castle-silhouette" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M0,640 L0,330 L90,330 L90,265 L160,265 L160,225 L230,225 L230,100 L290,100 L290,170 L370,170 L370,120 L450,120 L450,215 L470,215 L470,270 L560,270 L560,250 L635,250 L635,170 L710,170 L710,220 L770,220 L770,185 L845,185 L845,240 L910,240 L910,175 L980,175 L980,260 L1035,260 L1035,125 L1115,125 L1115,260 L1180,260 L1180,190 L1245,190 L1245,255 L1320,255 L1320,330 L1440,330 L1440,640 Z"></path>
+        </svg>
+
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <div class="eyebrow">magical spatial intelligence</div>
+            <h1>See beyond what magic hides.</h1>
+            <p class="lead">The handheld spatial scanner for the wizarding world. Map hidden rooms. Find life behind walls. Know before you enter.</p>
+
+            <div class="cta-row">
+              <a href="#scanner" class="btn btn-primary">Try the Scanner</a>
+              <a href="#service" class="btn btn-secondary">Request a Scan</a>
+            </div>
+
+            <div class="ticker" aria-live="polite">
+              <span class="ticker-label">Owl-post ticker</span>
+              <span id="tickerText">Trusted by 40+ departments across Britain</span>
+            </div>
+
+            <div class="stats-strip" aria-label="Key product statistics">
+              <div class="stat">
+                <span class="stat-number" data-count="18">0</span>
+                <small>m scan range</small>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="4">0</span>
+                <small>layers</small>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="87">0</span>
+                <small>% confidence</small>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="14">0</span>
+                <small>hr battery</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="device-illustration" aria-label="OMNI-SCOPE device">
+              <svg viewBox="0 0 620 520" role="img" aria-labelledby="deviceTitle">
+                <title id="deviceTitle">OMNI-SCOPE magical scanner</title>
+                <defs>
+                  <radialGradient id="scanGlow" cx="50%" cy="50%" r="55%">
+                    <stop offset="0%" stop-color="#8ec6ff" stop-opacity="1" />
+                    <stop offset="40%" stop-color="#5fa3ff" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#2f5ec4" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <ellipse cx="320" cy="420" rx="165" ry="34" fill="rgba(15, 12, 20, 0.45)"></ellipse>
+                <g transform="translate(76 38)">
+                  <path d="M42 290 L42 72 C42 55 55 42 72 42 H320 C355 42 382 60 404 92 L478 188 C493 207 492 227 478 246 L404 342 C382 374 355 392 320 392 H72 C55 392 42 379 42 362 Z" fill="#3E2818" stroke="#c39a4d" stroke-width="8"></path>
+                  <path d="M104 240 L104 100 C104 81 118 66 136 66 H292 C317 66 338 84 338 108 V240 C338 267 316 289 289 289 H146 C118 289 104 271 104 240 Z" fill="#2c1d12" stroke="#caa65d" stroke-width="6"></path>
+                  <circle cx="220" cy="185" r="94" fill="url(#scanGlow)" opacity="0.9"></circle>
+                  <circle cx="220" cy="185" r="82" fill="#1e2d4f" stroke="#caa65d" stroke-width="8"></circle>
+                  <circle cx="220" cy="185" r="58" fill="#6aaaf7" opacity="0.3"></circle>
+                  <circle cx="220" cy="185" r="36" fill="rgba(116, 176, 255, 0.8)"></circle>
+                  <path d="M178 220 L220 154 L262 220" fill="none" stroke="#4ff7c4" stroke-width="3" opacity="0.9"></path>
+                  <path d="M181 180 L202 210 L214 191 L240 214 L258 182" fill="none" stroke="#d6b36d" stroke-width="4"></path>
+                  <g opacity="0.9">
+                    <circle cx="182" cy="238" r="7" fill="#ff6a3d"></circle>
+                    <circle cx="214" cy="250" r="7" fill="#ff6a3d"></circle>
+                    <circle cx="246" cy="244" r="7" fill="#ff6a3d"></circle>
+                    <circle cx="272" cy="214" r="7" fill="#ff6a3d"></circle>
+                  </g>
+                  <path d="M119 106 H202" stroke="#caa65d" stroke-width="6"></path>
+                  <path d="M118 292 H287" stroke="#caa65d" stroke-width="6"></path>
+                  <path d="M52 108 H78" stroke="#caa65d" stroke-width="8"></path>
+                  <path d="M52 294 H78" stroke="#caa65d" stroke-width="8"></path>
+                  <path d="M351 178 H388" stroke="#caa65d" stroke-width="10"></path>
+                  <path d="M358 230 H388" stroke="#caa65d" stroke-width="10"></path>
+                  <circle cx="365" cy="115" r="13" fill="#d9b76d"></circle>
+                  <circle cx="365" cy="150" r="10" fill="#d9b76d"></circle>
+                  <circle cx="365" cy="185" r="10" fill="#d9b76d"></circle>
+                  <circle cx="365" cy="220" r="10" fill="#d9b76d"></circle>
+                  <g fill="#d7b873" font-size="12" font-family="JetBrains Mono, monospace" font-weight="700">
+                    <text x="140" y="338">SCAN</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">The problem</span>
+            <h2>A castle that never stays the same.</h2>
+          </div>
+
+          <div class="problem-grid">
+            <article class="info-card" data-reveal>
+              <div class="card-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8 L54 20 V36 L32 56 L10 36 V20 Z"></path></svg>
+              </div>
+              <h3>Moving Staircases</h3>
+              <p>Stairways shift without warning, leaving staff and students facing dead ends or sudden cliffs.</p>
+            </article>
+
+            <article class="info-card" data-reveal>
+              <div class="card-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 16 H52 V48 H12 Z M20 16 L20 8 H44 V16 M20 24 H44 M20 34 H44 M20 44 H44"></path></svg>
+              </div>
+              <h3>Secret Passages</h3>
+              <p>Hidden corridors and concealed routes open inside walls and under stone floors.</p>
+            </article>
+
+            <article class="info-card" data-reveal>
+              <div class="card-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="18" r="8"></circle><path d="M16 48 L22 30 H42 L48 48 H16 Z"></path></svg></div>
+              <h3>Hidden Rooms</h3>
+              <p>Unmapped spaces form behind fireplaces, beneath libraries, and inside old masonry.</p>
+            </article>
+
+            <article class="info-card" data-reveal>
+              <div class="card-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 48 L23 18 H41 L52 48 M21 32 H43"></path></svg>
+              </div>
+              <h3>Changing Architecture</h3>
+              <p>Wards, growth charms, and shifting stone continuously alter the layout of a castle wing.</p>
+            </article>
+          </div>
+
+          <div class="compare-panel" data-reveal>
+            <div class="compare-copy">
+              <div class="mini-label">Marauder's Map vs Omni-Scope</div>
+              <div class="compare-row">
+                <div class="compare-box">
+                  <div class="compare-title">Marauder's Map</div>
+                  <p>Who is where?</p>
+                </div>
+                <div class="compare-box primary">
+                  <div class="compare-title">Omni-Scope</div>
+                  <p>What is where, and what is inside it?</p>
+                </div>
+              </div>
+              <p class="compare-note">Designed to work alongside the Map, not replace it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section section-amber">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">How it works</span>
+            <h2>See structure, heat, and danger before the door opens.</h2>
+          </div>
+
+          <div class="timeline-wrap" data-reveal>
+            <div class="timeline">
+              <div class="timeline-step">
+                <span class="step-badge">01</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M12 44 L28 21 L40 31 L52 18"></path></svg>
+                </div>
+                <h3>SCAN</h3>
+                <p>It emits magical radio waves that bounce through walls, gaps, and chambers.</p>
+              </div>
+
+              <div class="timeline-step">
+                <span class="step-badge">02</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M12 40 C18 26, 30 18, 46 18 C41 30, 34 36, 22 46"></path></svg>
+                </div>
+                <h3>REFLECT</h3>
+                <p>Echoes return from stone, doors, sealed spaces, and unusual voids.</p>
+              </div>
+
+              <div class="timeline-step">
+                <span class="step-badge">03</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M18 46 V22 M32 46 V18 M46 46 V28 M14 18 H50"></path></svg>
+                </div>
+                <h3>ANALYSE</h3>
+                <p>The device compares expected architecture with actual readings and anomalies.</p>
+              </div>
+
+              <div class="timeline-step">
+                <span class="step-badge">04</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M16 44 L16 20 L48 20 L48 44 M20 28 H44 M20 36 H44"></path></svg>
+                </div>
+                <h3>RECONSTRUCT</h3>
+                <p>Thousands of measurements become a 3-D blueprint of rooms and corridors.</p>
+              </div>
+
+              <div class="timeline-step">
+                <span class="step-badge">05</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M18 38 L28 24 L38 32 L50 18 M18 46 H50"></path></svg>
+                </div>
+                <h3>DETECT</h3>
+                <p>Hidden spaces and danger zones are flagged with probability alerts and warnings.</p>
+              </div>
+
+              <div class="timeline-step">
+                <span class="step-badge">06</span>
+                <div class="step-icon">
+                  <svg viewBox="0 0 64 64"><path d="M12 46 L24 28 L32 36 L52 18"></path></svg>
+                </div>
+                <h3>MAP</h3>
+                <p>A layered map shows structural layout, heat signatures, and probable anomalies.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="systems-row" data-reveal>
+            <div class="system-pill">Spatial-Radio Scanning</div>
+            <div class="system-pill">3-D Blueprint Reconstruction</div>
+            <div class="system-pill">Magical Thermal Resonance</div>
+            <div class="system-pill">Anomaly Detection</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scanner" class="section scanner-section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">The blueprint scanner</span>
+            <h2>Watch it find a room that isn't on any map.</h2>
+          </div>
+
+          <div class="scanner-stage" data-reveal>
+            <div class="scanner-shell">
+              <div class="scanner-frame">
+                <canvas id="scannerCanvas" aria-label="Interactive blueprint scanner demo"></canvas>
+              </div>
+
+              <aside class="readout-panel" aria-live="polite">
+                <div class="readout-header">
+                  <span class="readout-pill">STATUS</span>
+                  <span id="readoutStatus">IDLE</span>
+                </div>
+
+                <div class="readout-grid">
+                  <div><span>ACT</span><strong id="readoutAct">STAND BY</strong></div>
+                  <div><span>ROOMS</span><strong id="readoutRooms">00</strong></div>
+                  <div><span>ANOM</span><strong id="readoutAnomalies">00</strong></div>
+                  <div><span>LIFE</span><strong id="readoutLife">00</strong></div>
+                  <div><span>CONF%</span><strong id="readoutConfidence">—</strong></div>
+                  <div><span>PROG</span><strong id="readoutProgress">0%</strong></div>
+                </div>
+
+                <div class="scanner-bar">
+                  <div id="scanBar" class="scanner-bar-fill"></div>
+                </div>
+
+                <div class="event-log" id="eventLog">
+                  <div><span>00:00</span> Device online</div>
+                  <div><span>00:00</span> Awaiting scan command</div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="scanner-controls">
+              <button class="scan-btn action-btn" type="button" data-action="scan">SCAN</button>
+              <button class="action-btn" type="button" data-action="thermal">THERMAL</button>
+              <button class="action-btn" type="button" data-action="reset">RESET</button>
+              <label class="toggle-pill">
+                <input type="checkbox" id="interferenceToggle" />
+                <span>Interference</span>
+              </label>
+            </div>
+
+            <div class="layer-controls" aria-label="scanner layers">
+              <button class="layer-toggle active" type="button" data-layer="blueprint">Blueprint</button>
+              <button class="layer-toggle active" type="button" data-layer="thermal">Thermal</button>
+              <button class="layer-toggle active" type="button" data-layer="anomaly">Anomalies</button>
+              <button class="layer-toggle active" type="button" data-layer="hidden">Hidden Spaces</button>
+            </div>
+
+            <div class="slider-wrap">
+              <label for="rotateSlider">Rotate blueprint</label>
+              <input id="rotateSlider" type="range" min="-180" max="180" value="18" />
+            </div>
+
+            <p class="scanner-caption">Interactive demo. Simulated scan of a fictional castle wing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Features</span>
+            <h2>Built for walls, wards, and hidden spaces.</h2>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><path d="M14 48 L24 26 L32 34 L48 18 L50 48 Z"></path><path d="M14 48 H50"></path></svg></div>
+              <h3>Non-invasive scanning</h3>
+              <p>No breaking walls, no entering hidden spaces, no disruption to old stonework.</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><path d="M16 44 V18 H48 V44 M20 24 H44 M20 34 H44"></path></svg></div>
+              <h3>3-D blueprint reconstruction</h3>
+              <p>Build a live model of rooms, corridors, cavities, and structural seams.</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><path d="M18 46 L28 18 L46 46 M24 34 H40"></path></svg></div>
+              <h3>Hidden-space detection</h3>
+              <p>Flags sealed chambers and secret passages before anyone reaches the threshold.</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><circle cx="32" cy="22" r="10"></circle><path d="M20 46 C20 36, 24 30, 32 30 C40 30, 44 36, 44 46"></path></svg></div>
+              <h3>Life-signature detection</h3>
+              <p>Heat maps reveal living beings behind barriers, under floors, and behind locked walls.</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><path d="M16 18 H48 V46 H16 Z M20 22 H44 V42 H20 Z"></path></svg></div>
+              <h3>Wizarding architecture ready</h3>
+              <p>Built for moving staircases, enchanted stone, restricted rooms, and old wards.</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon"><svg viewBox="0 0 64 64"><path d="M18 40 L28 28 L38 36 L46 22 M18 44 H46"></path></svg></div>
+              <h3>Honest confidence scores</h3>
+              <p>It tells you what is likely, what is uncertain, and when a reading should be trusted less.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="specs" class="section section-amber">
+        <div class="container specs-grid">
+          <div class="spec-card parchment-panel" data-reveal>
+            <h3>Specifications</h3>
+            <table>
+              <tr><th>Scan range</th><td>18 metres</td></tr>
+              <tr><th>Resolution</th><td>±4 cm</td></tr>
+              <tr><th>Battery</th><td>Everburning ember core, 14 hours</td></tr>
+              <tr><th>Weight</th><td>1.3 kg</td></tr>
+              <tr><th>Materials</th><td>Dragon-hide leather, enchanted brass, Lumos-quartz lens</td></tr>
+              <tr><th>Storage</th><td>200 saved scans</td></tr>
+            </table>
+          </div>
+
+          <div class="limitations-panel" data-reveal>
+            <h3>What Omni-Scope cannot do</h3>
+            <ul>
+              <li>Very thick wards interfere with readings.</li>
+              <li>Some enchanted materials distort signals.</li>
+              <li>Strong magical interference reduces accuracy.</li>
+              <li>Extreme cold lowers thermal reliability.</li>
+              <li>It detects anomalies, but cannot say exactly what they are.</li>
+              <li>It gives probabilities and alerts, not certainty.</li>
+              <li>It cannot see through everything.</li>
+            </ul>
+            <blockquote>A tool that admits its limits is a tool you can trust.</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Pricing</span>
+            <h2>Choose the right device for your wing, manor or department.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card" data-reveal>
+              <h3>Field Edition</h3>
+              <div class="price">350 G</div>
+              <small>≈ £1,750</small>
+              <ul>
+                <li>12m range</li>
+                <li>50 saved scans</li>
+                <li>Privacy Mode locked on</li>
+              </ul>
+              <button class="btn btn-secondary order-btn" type="button" data-order-tier="Field Edition">Order Now</button>
+            </article>
+
+            <article class="pricing-card featured" data-reveal>
+              <span class="badge">Most Popular</span>
+              <h3>Auror Pro</h3>
+              <div class="price">600 G</div>
+              <small>≈ £3,000</small>
+              <ul>
+                <li>18m range</li>
+                <li>Full thermal layer</li>
+                <li>200 saved scans</li>
+                <li>Ministry-licensed</li>
+              </ul>
+              <button class="btn btn-primary order-btn" type="button" data-order-tier="Auror Pro">Order Now</button>
+            </article>
+
+            <article class="pricing-card" data-reveal>
+              <h3>Castle Master</h3>
+              <div class="price">1,800 G</div>
+              <small>≈ £9,000</small>
+              <ul>
+                <li>30m range</li>
+                <li>Multi-floor mapping</li>
+                <li>1,000 saved scans</li>
+                <li>Priority support</li>
+              </ul>
+              <button class="btn btn-secondary order-btn" type="button" data-order-tier="Castle Master">Order Now</button>
+            </article>
+          </div>
+
+          <div class="addons-wrap" data-reveal>
+            <h3>Add-ons and services</h3>
+            <table>
+              <tr><th>Annual Calibration and Re-Enchantment</th><td>25 G</td></tr>
+              <tr><th>Map Vault subscription</th><td>12 G per month</td></tr>
+              <tr><th>Professional Scanning Service</th><td>80 G per room · 400 G per full floor</td></tr>
+              <tr><th>Ministry / Institutional contracts</th><td>Owl us for a quote</td></tr>
+            </table>
+          </div>
+
+          <p class="fictional-note">All prices are fictional and for a school project.</p>
+        </div>
+      </section>
+
+      <section id="reviews" class="section section-amber">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Reviews & testimonials</span>
+            <h2>Trusted by those who know what's behind the wall.</h2>
+          </div>
+
+          <div class="review-summary" data-reveal>
+            <div class="rating-score">
+              <strong>4.8 / 5</strong>
+              <span>from 1,240 fictional owls</span>
+            </div>
+            <div class="bar-chart" aria-label="Rating distribution">
+              <div><span>5★</span><i style="width: 78%"></i></div>
+              <div><span>4★</span><i style="width: 17%"></i></div>
+              <div><span>3★</span><i style="width: 4%"></i></div>
+              <div><span>2★</span><i style="width: 1%"></i></div>
+            </div>
+          </div>
+
+          <div class="testimonial-carousel" data-reveal>
+            <button class="carousel-btn prev" type="button" aria-label="Previous review">‹</button>
+
+            <div class="carousel-track">
+              <article class="testimonial active">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“We found a forgotten corridor behind the Third-Floor Gallery in under four minutes.”</p>
+                <div class="person">
+                  <strong>Professor Aldous Fernwick</strong>
+                  <span>Head of Castle Maintenance</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“I used to send in a junior. Now I know what's waiting before the door opens.”</p>
+                <div class="person">
+                  <strong>Senior Auror Mirabel Thorne</strong>
+                  <span>Department of Magical Law Enforcement</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“Found a rotten void under my cellar and saved me a collapsed floor.”</p>
+                <div class="person">
+                  <strong>Cassius Pennywhistle</strong>
+                  <span>Owner of The Gilded Cauldron Inn</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“Settled a family argument about a legendary hidden vault. It exists. It is empty. We are mortified.”</p>
+                <div class="person">
+                  <strong>Wilhelmina Brackenridge</strong>
+                  <span>Estate Manager, Brackenridge Manor</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“The 3-D map is the best survey tool I have used in thirty years.”</p>
+                <div class="person">
+                  <strong>Hesper Quillfeather</strong>
+                  <span>Magical Architect</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“In the dark with smoke everywhere, the life-signature view guided us straight to two trapped students.”</p>
+                <div class="person">
+                  <strong>Tobias Marrowgrove</strong>
+                  <span>Emergency Responder</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★★</div>
+                <p>“I didn't believe a room could hide that well. The Scope did.”</p>
+                <div class="person">
+                  <strong>Isolde Vane</strong>
+                  <span>Prefect and Student Safety Volunteer</span>
+                </div>
+              </article>
+
+              <article class="testimonial">
+                <span class="seal">Verified Wizard</span>
+                <div class="stars">★★★★☆</div>
+                <p>“Struggled in the frozen north tower, but warned me about low confidence right away.”</p>
+                <div class="person">
+                  <strong>Gideon Ashwell</strong>
+                  <span>Gringotts-style Vault Surveyor</span>
+                </div>
+              </article>
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next review">›</button>
+          </div>
+
+          <div class="carousel-dots" aria-label="review pagination">
+            <button class="dot active" type="button" aria-label="Go to review 1"></button>
+            <button class="dot" type="button" aria-label="Go to review 2"></button>
+            <button class="dot" type="button" aria-label="Go to review 3"></button>
+            <button class="dot" type="button" aria-label="Go to review 4"></button>
+            <button class="dot" type="button" aria-label="Go to review 5"></button>
+            <button class="dot" type="button" aria-label="Go to review 6"></button>
+            <button class="dot" type="button" aria-label="Go to review 7"></button>
+            <button class="dot" type="button" aria-label="Go to review 8"></button>
+          </div>
+
+          <p class="fictional-note">All reviews and people are fictional characters created for a school project.</p>
+        </div>
+      </section>
+
+      <section id="buy" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">How to buy</span>
+            <h2>Three simple steps to a calmer corridor.</h2>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card" data-reveal>
+              <span class="step-number">1</span>
+              <h3>Choose your Omni-Scope</h3>
+              <p>Pick an edition suited to your home, shop, department or estate.</p>
+            </div>
+
+            <div class="step-card" data-reveal>
+              <span class="step-number">2</span>
+              <h3>Verify your licence</h3>
+              <p>Privacy Mode for civilians, Ministry licence for professionals, Hogwarts authorisation for castle use.</p>
+            </div>
+
+            <div class="step-card" data-reveal>
+              <span class="step-number">3</span>
+              <h3>Owl delivery</h3>
+              <p>It arrives in 3 to 5 days, calibrated and enchanted for first use.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="section section-amber">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Request a service</span>
+            <h2>Don't own one? Let our Scanners come to you.</h2>
+          </div>
+
+          <div class="service-layout">
+            <div class="service-tabs" data-reveal>
+              <button class="service-tab active" type="button" data-service="single">Single Room Scan</button>
+              <button class="service-tab" type="button" data-service="floor">Full Floor Survey</button>
+              <button class="service-tab" type="button" data-service="estate">Castle / Estate Mapping</button>
+            </div>
+
+            <form class="service-form" id="serviceForm" data-reveal novalidate>
+              <div class="grid-two">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" required />
+                </label>
+                <label>
+                  <span>Contact owl address</span>
+                  <input type="email" name="email" required />
+                </label>
+              </div>
+
+              <div class="grid-two">
+                <label>
+                  <span>Location</span>
+                  <input type="text" name="location" required />
+                </label>
+                <label>
+                  <span>Service type</span>
+                  <select name="serviceType">
+                    <option value="single">Single Room Scan</option>
+                    <option value="floor">Full Floor Survey</option>
+                    <option value="estate">Castle / Estate Mapping</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="grid-two">
+                <label>
+                  <span>Preferred date</span>
+                  <input type="date" name="date" required />
+                </label>
+                <label>
+                  <span>Urgency</span>
+                  <select name="urgency">
+                    <option value="standard">Standard</option>
+                    <option value="priority">Priority</option>
+                    <option value="emergency">Emergency</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                <span>Notes</span>
+                <textarea name="notes" rows="4" placeholder="Tell us what you'd like scanned..."></textarea>
+              </label>
+
+              <div class="price-row">
+                <strong>Estimated price:</strong>
+                <span id="servicePrice">80 G</span>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Request a Scan</button>
+            </form>
+          </div>
+
+          <p class="small-note">Scans of private property require the owner's authorisation.</p>
+        </div>
+      </section>
+
+      <section id="safety" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Safety & ethics</span>
+            <h2>Power with permission.</h2>
+          </div>
+
+          <div class="safety-grid">
+            <article class="safety-card" data-reveal>
+              <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M22 28 V20 C22 14, 26 10, 32 10 C38 10, 42 14, 42 20 V28 M18 28 H46 V50 H18 Z"></path></svg></div>
+              <h3>Privacy Mode</h3>
+              <p>Civilians cannot scan private buildings without authorisation or a legal royal directive.</p>
+            </article>
+
+            <article class="safety-card" data-reveal>
+              <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M18 24 H46 V52 H18 Z M24 24 V18 C24 14, 27 10, 32 10 C37 10, 40 14, 40 18 V24"></path></svg></div>
+              <h3>Hogwarts Authorisation</h3>
+              <p>Some areas require professor approval or Headmaster sign-off before a legitimate scan can begin.</p>
+            </article>
+
+            <article class="safety-card" data-reveal>
+              <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M20 22 L32 12 L44 22 V36 C44 42, 39 48, 32 52 C25 48, 20 42, 20 36 Z"></path></svg></div>
+              <h3>Ministry Licence</h3>
+              <p>Professional scanning needs certification and authorised use, especially in public spaces.</p>
+            </article>
+
+            <article class="safety-card" data-reveal>
+              <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M16 48 L26 18 H38 L48 48 M22 36 H42"></path></svg></div>
+              <h3>Restricted Scan Zones</h3>
+              <p>Sensitive magical locations are blocked to prevent trespass, interference, and unsafe detection.</p>
+            </article>
+          </div>
+
+          <div class="guard-dialog" data-reveal>
+            <div class="lock-graphic">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <path d="M36 52 V38 C36 24, 47 14, 60 14 C73 14, 84 24, 84 38 V52 M28 52 H92 V100 H28 Z"></path>
+                <circle cx="60" cy="74" r="11"></circle>
+              </svg>
+            </div>
+            <div class="guard-copy">
+              <span>Scan blocked</span>
+              <strong>Restricted Zone.</strong>
+              <p>Headmaster approval required.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="compare" class="section section-amber">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">Compare</span>
+            <h2>Every tool has a place.</h2>
+          </div>
+
+          <div class="compare-table-wrap" data-reveal>
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Omni-Scope</th>
+                  <th>Marauder's Map</th>
+                  <th>Visual inspection</th>
+                  <th>Detection charms</th>
+                  <th>Paper blueprints</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th>Shows people</th><td>Partial</td><td>✓</td><td>✗</td><td>Partial</td><td>✗</td></tr>
+                <tr><th>Shows structure</th><td>✓</td><td>Partial</td><td>✓</td><td>Partial</td><td>✓</td></tr>
+                <tr><th>Finds hidden spaces</th><td>✓</td><td>✗</td><td>Partial</td><td>Partial</td><td>✗</td></tr>
+                <tr><th>3-D map</th><td>✓</td><td>✗</td><td>✗</td><td>✗</td><td>Partial</td></tr>
+                <tr><th>Safe (no entry)</th><td>✓</td><td>✓</td><td>✗</td><td>Partial</td><td>✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="small-note">Each tool has its place. Omni-Scope fills the gap.</p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions before the chamber opens.</h2>
+          </div>
+
+          <div class="faq-list" data-reveal>
+            <div class="faq-item open">
+              <button class="faq-question" type="button">How accurate is it?</button>
+              <div class="faq-answer">
+                <p>It is highly accurate in standard ward conditions, especially for major architecture. Accuracy drops when the environment is heavily enchanted or unusually cold.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">Can it see through everything?</button>
+              <div class="faq-answer">
+                <p>No. Thick wards, dense magical materials and interference can block or distort readings. It is best thought of as a highly capable detector, not a perfect oracle.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">Can civilians use it on other people's homes?</button>
+              <div class="faq-answer">
+                <p>No. Privacy Mode prevents unauthorised scans of private buildings. Some environments require a licensed operator or explicit approval.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">What if the device fails?</button>
+              <div class="faq-answer">
+                <p>It warns you with a low-confidence alert, and staff can fall back to manual inspection, ward checks, and the on-display hazard warnings.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">How is it different from the Marauder's Map?</button>
+              <div class="faq-answer">
+                <p>The Map shows who is where. Omni-Scope shows what is where, and what is inside it: walls, rooms, cavities, voids, structure and life signatures behind barriers.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">Why not just use a spell?</button>
+              <div class="faq-answer">
+                <p>Many spells reveal only a single layer of truth. Omni-Scope measures the structure itself and layers the results into a coherent map with clearer probabilities.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">How often does it need calibration?</button>
+              <div class="faq-answer">
+                <p>Recommended calibration is every 12 months, or sooner after heavy magical interference, a fall, or a major ward event.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">Is my scan data private?</button>
+              <div class="faq-answer">
+                <p>Yes. Privacy Mode, stored-scan restrictions and licensed access controls are built in. Sensitive maps can be locked behind authorisation or stored only in controlled vaults.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container">
+          <div class="cta-banner" data-reveal>
+            <img src="assets/logo.svg" alt="OMNI-SCOPE logo" />
+            <div class="cta-copy">
+              <span class="eyebrow">See beyond what magic hides.</span>
+              <h2>Know what waits behind the wall.</h2>
+            </div>
+            <div class="cta-actions">
+              <button class="btn btn-primary order-btn" type="button" data-order-tier="Auror Pro">Order Now</button>
+              <a href="#service" class="btn btn-secondary">Request a Scan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="OMNI-SCOPE logo" />
+          <p>Magical spatial intelligence for walls, wards, voids and hidden places.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#problem">The Problem</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#scanner">Scanner</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-address">
+          <h4>Workshop</h4>
+          <p>Omni-Scope Ltd.<br />Workshop 7, Diagon Alley</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            OMNI-SCOPE is a fictional product created for a school entrepreneurship event with a Harry Potter theme.
+            It is not affiliated with, endorsed by or connected to J.K. Rowling, Warner Bros. or any official Harry Potter rights holder.
+            All prices, reviews and people are invented.
+          </p>
+          <p>Made by Viv &amp; Ashutosh</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="orderModal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <button class="modal-close" type="button" aria-label="Close order form">×</button>
+        <h3 id="orderModalTitle">Order Omni-Scope</h3>
+
+        <form id="orderForm" novalidate>
+          <label>
+            <span>Full name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Owl address (or Floo address)</span>
+            <input type="text" name="address" required />
+          </label>
+
+          <div class="grid-two">
+            <label>
+              <span>Edition</span>
+              <select name="edition">
+                <option>Field Edition</option>
+                <option>Auror Pro</option>
+                <option>Castle Master</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Quantity</span>
+              <input type="number" name="quantity" min="1" value="1" required />
+            </label>
+          </div>
+
+          <div class="grid-two">
+            <label>
+              <span>Licence type</span>
+              <select name="licence">
+                <option>Private Use</option>
+                <option>Ministry Licence</option>
+                <option>Hogwarts Authorisation</option>
+              </select>
+            </label>
+
+            <label class="addon-label">
+              <span>Add-ons</span>
+              <div class="addon-list">
+                <label><input type="checkbox" value="25" data-addon="Calibration" /> Calibration +25 G</label>
+                <label><input type="checkbox" value="12" data-addon="Map Vault" /> Map Vault +12 G/mo</label>
+              </div>
+            </label>
+          </div>
+
+          <div class="order-total">
+            <span>Total</span>
+            <strong id="orderTotal">0 G</strong>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send by Owl</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

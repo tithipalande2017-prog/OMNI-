@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="OMNI-SCOPE logo">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0d27a"/>
+      <stop offset="50%" stop-color="#d9b76d"/>
+      <stop offset="100%" stop-color="#8a652f"/>
+    </linearGradient>
+  </defs>
+  <circle cx="110" cy="110" r="94" fill="#0b0a14" stroke="url(#g1)" stroke-width="4"/>
+  <circle cx="110" cy="110" r="68" fill="none" stroke="url(#g1)" stroke-width="2.4"/>
+  <path d="M110 40 L136 84 L182 92 L148 124 L158 168 L110 146 L62 168 L72 124 L38 92 L84 84 Z" fill="none" stroke="url(#g1)" stroke-width="4" />
+  <path d="M110 60 L126 97 L164 99 L136 126 L144 164 L110 143 L76 164 L84 126 L56 99 L94 97 Z" fill="none" stroke="url(#g1)" stroke-width="2.5" />
+  <circle cx="110" cy="110" r="10" fill="url(#g1)"/>
+  <path d="M52 110 H168 M110 52 V168" stroke="rgba(240,210,122,0.7)" stroke-width="1.2"/>
+  <text x="110" y="196" text-anchor="middle" fill="#f0d27a" font-size="18" font-family="'Cinzel', serif" letter-spacing="4">OMNI</text>
+</svg>
